@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/pages/Home';
+import Service from '@/pages/Service';
 import Cart from '@/pages/Cart';
 import Details from '@/pages/Details';
 // Admin Components
@@ -17,7 +18,13 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home,
-    }, {
+    },
+    {
+        path: '/service',
+        name: 'Service',
+        component: Service,
+    },
+    {
       path: '/admin',
       name: 'Admin',
       // Parent routes still has a component

@@ -52,7 +52,7 @@
   }
   .product-link {
     display: block;
-    color: #3D3D3D;
+    color: #333;
   }
   .product-link:hover {
     color: #3D3D3D;

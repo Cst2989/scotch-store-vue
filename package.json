@@ -19,6 +19,7 @@
     "toastr": "^2.1.2",
     "vee-validate": "^2.0.0-rc.18",
     "vue": "^2.4.2",
+    "vue-easy-slider": "^3.2.0",
     "vue-router": "^2.7.0",
     "vuex": "^2.4.1"
   },
