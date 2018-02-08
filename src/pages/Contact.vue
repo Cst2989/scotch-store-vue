@@ -4,7 +4,7 @@
     <img src="http://via.placeholder.com/1920x250" alt="">
   </div>
   <div class="title">
-    <h1><i class="fa fa-braille"></i> Pagina de serviciu</h1>
+    <h1><i class="fa fa-braille"></i> Pagina de Contact</h1>
   </div>
   <div class="container">
     <div class="col-md-8 col-sm-12">
@@ -45,7 +45,7 @@
 <script>
 import ServicesList from '../components/services/ServicesList.vue'
 export default {
-  name: 'service',
+  name: 'despre-noi',
   components: {
     'service-list': ServicesList
   }

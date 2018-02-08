@@ -2,6 +2,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/pages/Home';
 import Service from '@/pages/Service';
+import DespreNoi from '@/pages/DespreNoi';
+import Contact from '@/pages/Contact';
 import Cart from '@/pages/Cart';
 import Details from '@/pages/Details';
 // Admin Components
@@ -23,6 +25,16 @@ export default new Router({
         path: '/service',
         name: 'Service',
         component: Service,
+    },
+    {
+        path: '/contact',
+        name: 'Contact',
+        component: Contact,
+    },
+    {
+        path: '/despre-noi',
+        name: 'Despre Noi',
+        component: DespreNoi,
     },
     {
       path: '/admin',

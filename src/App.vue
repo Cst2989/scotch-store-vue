@@ -7,10 +7,10 @@
           <router-link to="/"><i class="fa fa-home"></i> Home</router-link>
         </li>
         <li>
-          <router-link to="/"><i class="fa fa-home"></i> Despre Noi</router-link>
+          <router-link to="/despre-noi"><i class="fa fa-home"></i> Despre Noi</router-link>
         </li>
         <li>
-          <router-link to="/"><i class="fa fa-home"></i> Contact</router-link>
+          <router-link to="/contact"><i class="fa fa-home"></i> Contact</router-link>
         </li>
         <li>
           <router-link to="/admin"><i class="fa fa-user"></i> Admin</router-link>
@@ -21,10 +21,10 @@
           <router-link to="/cart"><i class="fa fa-shopping-cart"></i> Cart ({{cartItemsCount}})</router-link>
         </li>
         <li>
-            <a href="#"> <i class="fa fa-phone"></i>  Service:</span>&nbsp;(232) 938-5798</a>
+            <a href="#"> <i class="fa fa-phone"></i>(232) 938-5798</a>
         </li>
         <li>
-          <a href="#"><i class="fa fa-phone"></i>  Informatii:</span>&nbsp;(888) 637-7262</a> 
+          <a href="#"><i class="fa fa-phone"></i>(888) 637-7262</a>
         </li>
       </ul>
     </div>
