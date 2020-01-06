@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from '@/pages/Home';
 import Service from '@/pages/Service';
 import DespreNoi from '@/pages/DespreNoi';
+import Catalog from '@/pages/Catalog';
 import Contact from '@/pages/Contact';
 import Cart from '@/pages/Cart';
 import Details from '@/pages/Details';
@@ -26,6 +27,11 @@ export default new Router({
         name: 'Service',
         component: Service,
     },
+    {
+      path: '/catalog',
+      name: 'Catalog',
+      component: Catalog,
+  },
     {
         path: '/contact',
         name: 'Contact',

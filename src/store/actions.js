@@ -1,7 +1,5 @@
 // ./src/store/actions
 import axios from 'axios';
-const API_BASE = 'https://vue-express-store.herokuapp.com/api/v1/';
-
 import {
   ADD_PRODUCT,
   ADD_PRODUCT_SUCCESS,
@@ -14,9 +12,10 @@ import {
   ALL_PRODUCTS,
   ALL_PRODUCTS_SUCCESS,
   ALL_MANUFACTURERS,
-  ALL_MANUFACTURERS_SUCCESS
+  ALL_MANUFACTURERS_SUCCESS,
 } from './mutation-types';
 
+const API_BASE = 'https://vue-express-store.herokuapp.com/api/v1/';
 
 export const productActions = {
   allProducts ({commit}) {

@@ -1,31 +1,19 @@
 <template>
   <div>
-    <slider animation="fade">
-      <slider-item v-for="(i, index) in slides" :key="index">
-        <div :style="i">
-          <p style="line-height: 280px; font-size: 5rem; text-align: center;">Page{{ index + 1 }}</p>
-        </div>
-      </slider-item>
-    </slider>
     <div class="title">
-      <h1><i class="fa fa-braille"></i> Welcome</h1>
-    </div>
-    <h2>Welcome to our website!</h2>
-    <div class="title">
-        <h1><i class="fa fa-server"></i> Serviciile Noastre</h1>
+      <h1><i class="fa fa-braille"></i> Cars Catalog</h1>
     </div>
     <div class="container">
-        <service-list :size="4"></service-list>
+        <product-list></product-list>
     </div>
   </div>
 </template>
 
 <script>
-  import { Slider, SliderItem } from 'vue-easy-slider'
   import ProductList from '../components/products/ProductList.vue'
   import ServicesList from '../components/services/ServicesList.vue'
   export default {
-    name: 'home',
+    name: 'catalog',
     data () {
         return {
           slides: [
@@ -38,8 +26,6 @@
     components: {
       'product-list': ProductList,
       'service-list': ServicesList,
-      'slider': Slider,
-      'slider-item': SliderItem
     }
   }
 </script>

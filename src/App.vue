@@ -7,10 +7,13 @@
           <router-link to="/"><i class="fa fa-home"></i> Home</router-link>
         </li>
         <li>
-          <router-link to="/despre-noi"><i class="fa fa-home"></i> Despre Noi</router-link>
+          <router-link to="/despre-noi"><i class="fa fa-home"></i> About us</router-link>
         </li>
         <li>
           <router-link to="/contact"><i class="fa fa-home"></i> Contact</router-link>
+        </li>
+        <li>
+          <router-link to="/catalog"><i class="fa fa-home"></i> Catalog</router-link>
         </li>
         <li>
           <router-link to="/admin"><i class="fa fa-user"></i> Admin</router-link>
