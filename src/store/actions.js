@@ -13,7 +13,7 @@ import {
   ALL_PRODUCTS_SUCCESS,
 } from './mutation-types';
 
-const API_BASE = 'https://vue-express-store.herokuapp.com/api/v1/';
+const API_BASE = 'https://localhost:3000/api/v1/';
 
 export const productActions = {
   allProducts ({commit}) {
