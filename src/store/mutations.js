@@ -11,8 +11,6 @@ import {
   REMOVE_FROM_CART,
   ALL_PRODUCTS,
   ALL_PRODUCTS_SUCCESS,
-  ALL_MANUFACTURERS,
-  ALL_MANUFACTURERS_SUCCESS
 } from './mutation-types';
 
 export const productMutations = {
@@ -51,7 +49,7 @@ export const productMutations = {
     state.showLoader = false
     state.products = state.products.map(p => {
       if (p._id === payload._id) {
-        payload = {...payload, manufacturer: state.manufacturers.filter(x => x._id === payload.manufacturer)[0]}
+        payload = {...payload}
         return payload
       }
       return p
@@ -77,12 +75,3 @@ export const cartMutations = {
   }
 }
 
-export const manufacturerMutations = {
-  [ALL_MANUFACTURERS] (state) {
-    state.showLoader = true
-  },
-  [ALL_MANUFACTURERS_SUCCESS] (state, payload) {
-    state.showLoader = false
-    state.manufacturers = payload
-  }
-}

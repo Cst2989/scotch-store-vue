@@ -90,7 +90,7 @@
     ERROR_MSG
   } from '../../store/mutation-types'
   export default {
-    props: ['model', 'manufacturers', 'isEditing'],
+    props: ['model', 'isEditing'],
     created () {
     },
     methods: {

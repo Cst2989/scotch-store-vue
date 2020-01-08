@@ -11,8 +11,6 @@ import {
   REMOVE_PRODUCT_SUCCESS,
   ALL_PRODUCTS,
   ALL_PRODUCTS_SUCCESS,
-  ALL_MANUFACTURERS,
-  ALL_MANUFACTURERS_SUCCESS,
 } from './mutation-types';
 
 const API_BASE = 'https://vue-express-store.herokuapp.com/api/v1/';
@@ -56,12 +54,3 @@ export const productActions = {
   }
 };
 
-export const manufacturerActions = {
-  allManufacturers ({commit}) {
-    commit(ALL_MANUFACTURERS)
-    // Fetch all manufacturers from API
-    axios.get(`${API_BASE}/manufacturers`).then(response => {
-      commit(ALL_MANUFACTURERS_SUCCESS, response.data)
-    })
-  }
-}
