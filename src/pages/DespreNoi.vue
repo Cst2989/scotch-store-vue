@@ -28,15 +28,19 @@
       </div>
     </div>
     <div class="col-md-4 col-sm-12">
-        <service-list :size="12"></service-list>
+      
     </div>
   </div>
 </div>
 </template>
 <style>
+
 .header-image{
     position: relative;
     display: block;
+}
+.nav__left {
+  display: none !important;
 }
 .header-image img {
     max-width: 100%;

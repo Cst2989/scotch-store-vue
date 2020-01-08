@@ -2,7 +2,7 @@
   <form @submit.prevent="saveProduct">
     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
       <div class="form-group">
-        <label>Name</label>
+        <label>Model</label>
         <input
           type="text"
           placeholder="Name"
@@ -11,6 +11,17 @@
           name="name"
           :class="{'form-control': true, 'error': errors.has('name') }" />
         <span class="small text-danger" v-show="errors.has('name')">Name is required</span>
+      </div>
+      <div class="form-group">
+        <label>Year</label>
+        <input
+          type="text"
+          placeholder="Year"
+          v-model="model.year"
+          v-validate="'required'"
+          name="year"
+          :class="{'form-control': true, 'error': errors.has('year') }" />
+        <span class="small text-danger" v-show="errors.has('year')">Year is required</span>
       </div>
       <div class="form-group">
         <label>Price</label>
@@ -25,20 +36,15 @@
         <span class="small text-danger" v-show="errors.has('price')">Price is required</span>
       </div>
       <div class="form-group">
-
-        <label>Manufacturer</label>
-        <select
+        <label>Location</label>
+        <input
           type="text"
-          class="form-control"
-          v-model="model.manufacturer"
+          placeholder="Location"
+          v-model="model.location"
           v-validate="'required'"
-          name="manufacturer"
-          :class="{'form-control': true, 'error': errors.has('manufacturer') }">
-          <template v-for="manufacturer in manufacturers">
-            <option :value="manufacturer._id" :selected="manufacturer._id == (model.manufacturer && model.manufacturer._id)">{{manufacturer.name}}</option>
-          </template>
-        </select>
-        <span class="small text-danger" v-show="errors.has('manufacturer')">Manufacturer is required</span>
+          name="location"
+          :class="{'form-control': true, 'error': errors.has('location') }" />
+        <span class="small text-danger" v-show="errors.has('location')">Location is required</span>
       </div>
     </div>
 

@@ -4,7 +4,7 @@
     <div class="container">
       <ul class="nav__left">
         <li>
-          <router-link to="/"><i class="fa fa-home"></i> Home</router-link>
+          <router-link to="/despre-noi"><i class="fa fa-home"></i> Home</router-link>
         </li>
         <li>
           <router-link to="/despre-noi"><i class="fa fa-home"></i> About us</router-link>
@@ -141,6 +141,9 @@
     background-color: transparent;
     padding: 66px 0 20px;
     color: #aaa;
+}
+.nav__left {
+  display: flex !important;
 }
 .footer_widgets_wrapper .widget-title {
     margin-bottom: 15px;

@@ -8,7 +8,8 @@
   </div>
   <div class="container">
     <div class="col-md-8 col-sm-12">
-      <div class="text">
+      <div class="text" style="color:#fff;position: relative;
+    z-index: -1;">
         <p> <strong>The standard Lorem Ipsum passage, used since the 1500s</strong></p>
         <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
           irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -25,10 +26,29 @@
           who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious
           physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
         </p>
+        <div class="form">
+          <form action="">
+            <div class="form-group">
+              <label for="exampleInputEmail1" style="color:#ccc">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label style="color:#ccc" for="exampleInputEmail1">Message</label>
+              <textarea  class="form-control" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form-group" style="margin-bottom: -30px">
+              <!-- Indicates a successful or positive action -->
+              <button type="button" class="btn btn-success">Success</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     <div class="col-md-4 col-sm-12">
-        <service-list :size="12"></service-list>
+      <div class="title">
+          <h1><i class="fa fa-braille"></i> Contact info</h1>
+          <a href="mailto:contact@audicars.ro">contact@bmwmotors.ro</a>
+      </div>
     </div>
   </div>
 </div>

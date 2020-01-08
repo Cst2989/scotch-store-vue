@@ -8,7 +8,8 @@
         </div>
         <div class="product__description">
           <div class="product__info">
-            <small>{{product.manufacturer.name}}</small>
+            <small>{{product.year}}</small>
+            <small>{{product.location}}</small>
             <h4>{{product.name}}</h4>
           </div>
           <div class="product__price-cart">
