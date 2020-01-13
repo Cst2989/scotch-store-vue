@@ -8,9 +8,21 @@
       </slider-item>
     </slider>
     <div class="title">
-      <h1><i class="fa fa-braille"></i> Welcome</h1>
+      <h1><i class="fa fa-braille"></i> Welcome to our website!</h1>
     </div>
-    <h2>Welcome to our website!</h2>
+    <div class="container">
+      <div class="form">
+        <div class="form-control">
+          <input type="text" placeholder="Username">
+        </div>
+        <div class="form-control">
+          <input type="password" placeholder="Password">
+        </div>
+        <div class="form-control">
+          <button class="btn">Login</button>
+        </div>
+      </div>
+    </div>
     <div class="title">
         <h1><i class="fa fa-server"></i> Serviciile Noastre</h1>
     </div>
