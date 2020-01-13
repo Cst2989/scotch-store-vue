@@ -10,12 +10,24 @@ import {
   REMOVE_PRODUCT,
   REMOVE_PRODUCT_SUCCESS,
   ALL_PRODUCTS,
+  ORDER_PRODUCTS_ASC,
+  ORDER_PRODUCTS_DESC,
+  FILTER_BY_NAME,
   ALL_PRODUCTS_SUCCESS,
 } from './mutation-types';
 
-const API_BASE = 'https://localhost:3000/api/v1/';
+const API_BASE = 'http://localhost:3000/api/v1';
 
 export const productActions = {
+  orderProductsAsc({commit}) {
+    commit(ORDER_PRODUCTS_ASC);
+  },
+  orderProductsDesc({commit}) {
+    commit(ORDER_PRODUCTS_DESC);
+  },
+  filterByName({commit}, payload) {
+    commit(FILTER_BY_NAME, payload);
+  },
   allProducts ({commit}) {
     commit(ALL_PRODUCTS)
     // Fetch actual products from the API
