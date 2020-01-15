@@ -21,3 +21,4 @@ export const ERROR_MSG = 'ERROR_MSG';
 export const ORDER_PRODUCTS_ASC = 'ORDER_PRODUCTS_ASC';
 export const ORDER_PRODUCTS_DESC = 'ORDER_PRODUCTS_DESC';
 export const FILTER_BY_NAME = 'FILTER_BY_NAME';
+export const LOGIN = 'LOGIN';

@@ -13,14 +13,13 @@
     <div class="container">
       <div class="form">
         <div class="form-control">
-          <input type="text" placeholder="Username">
+          <input type="text" class="form-control" v-model="username" placeholder="Username">
         </div>
         <div class="form-control">
-          <input type="password" placeholder="Password">
+          <input type="password" class="form-control" v-model="password" placeholder="Password">
         </div>
-        <div class="form-control">
-          <button class="btn">Login</button>
-        </div>
+        
+          <button v-on:click="login()" class="btn btn-default">Login</button>
       </div>
     </div>
     <div class="title">
@@ -44,8 +43,19 @@
             { backgroundColor: '#3f51b5', width: '100%', height: '100%' },
             { backgroundColor: '#eee', width: '100%', height: '100%' },
             { backgroundColor: '#f44336', width: '100%', height: '100%' },
-          ]
+          ],
+          username: '',
+          password: '',
         }
+    },
+    methods: {
+      login() {
+        payload = {
+          username: this.username,
+          password: this.password,
+        }
+        this.$store.dispatch('login', payload)
+      }
     },
     components: {
       'product-list': ProductList,
