@@ -11,15 +11,16 @@
       <h1><i class="fa fa-braille"></i> Welcome to our website!</h1>
     </div>
     <div class="container">
-      <div class="form">
-        <div class="form-control">
+      <div class="form col-md-6">
+        <div class="form-group">
           <input type="text" class="form-control" v-model="username" placeholder="Username">
         </div>
-        <div class="form-control">
+        <div class="form-group">
           <input type="password" class="form-control" v-model="password" placeholder="Password">
         </div>
-        
+         <div class="form-group">
           <button v-on:click="login()" class="btn btn-default">Login</button>
+        </div>
       </div>
     </div>
     <div class="title">
@@ -50,7 +51,7 @@
     },
     methods: {
       login() {
-        payload = {
+        let payload = {
           username: this.username,
           password: this.password,
         }

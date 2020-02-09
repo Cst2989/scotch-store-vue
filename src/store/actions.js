@@ -30,7 +30,9 @@ export const productActions = {
     commit(FILTER_BY_NAME, payload);
   },
   login({commit}, payload) {
-    commit(LOGIN, payload);
+    axios.post(`http://localhost:3000/api/v1/login`, payload).then(response => {
+     commit(LOGIN, response.data);
+    })
   },
   allProducts ({commit}) {
     commit(ALL_PRODUCTS)

@@ -8,6 +8,7 @@ import {
   REMOVE_PRODUCT,
   REMOVE_PRODUCT_SUCCESS,
   ADD_TO_CART,
+  LOGIN,
   REMOVE_FROM_CART,
   ORDER_PRODUCTS_ASC,
   ORDER_PRODUCTS_DESC,
@@ -20,6 +21,10 @@ export const productMutations = {
   [ALL_PRODUCTS] (state) {
     // Called when fetching products
     state.showLoader = true
+  },
+  [LOGIN] (state, payload) {
+    // Called when fetching products
+    console.log(payload)
   },
   [ALL_PRODUCTS_SUCCESS] (state, payload) {
     // Called when products have been fetched
