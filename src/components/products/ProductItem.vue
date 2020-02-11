@@ -1,5 +1,5 @@
 <template>
-  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="width:200px">
     <div class="product">
       <router-link :to="'/details/'+product._id" class="product-link">
         <div class="product__image">
@@ -7,10 +7,10 @@
             class="img-responsive" :src="product.image" alt="">
         </div>
         <div class="product__description">
+          <h4>{{product.name}}</h4>
           <div class="product__info">
             <small>{{product.year}}</small>
             <small>{{product.location}}</small>
-            <h4>{{product.name}}</h4>
           </div>
           <div class="product__price-cart">
             ${{product.price}}
@@ -39,7 +39,7 @@
     background: #FFF;
     margin-bottom: 30px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
   }
   .product .product__description,
   .product .product__action {
@@ -73,6 +73,9 @@
     display: flex;
     padding: 20px 20px 15px;
     background: #FFF;
+    position: relative;
+    overflow: visible;
+    padding-top: 30px;
   }
   .product__info {
     flex: 2;
@@ -82,6 +85,11 @@
   }
   .product__description h4 {
     margin: 3px 0 5px 0;
+    width: auto;
+    display: block;
+    position: absolute;
+    top:0;
+    width: max-content;
   }
   .product__price-cart {
     flex: 1;

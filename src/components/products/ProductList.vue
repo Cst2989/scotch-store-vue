@@ -33,13 +33,13 @@
         this.$store.dispatch('allProducts')
       }
       if(this.$route.query.filterBy) {
-        this.$store.dispatch('filterByName', this.$route.query.filterBy)
+         setTimeout(() =>  this.$store.dispatch('filterByName', this.$route.query.filterBy), 1000)
       }
       if(this.$route.query.sortBy) {
         if (this.$route.query.sortBy === 'asc') {
-          this.$store.dispatch('orderProductsAsc')
+          setTimeout(() => this.$store.dispatch('orderProductsAsc'), 1000)
         } else {
-          this.$store.dispatch('orderProductsDesc')
+          setTimeout(() => this.$store.dispatch('orderProductsDesc'), 1000)
         }
       }
     },

@@ -1,11 +1,8 @@
 <template>
-<div>
-  <div class="header-image">
-    <img src="http://via.placeholder.com/1920x250" alt="">
-  </div>
-  <div class="title">
-    <h1><i class="fa fa-braille"></i> Pagina de Despre noi</h1>
-  </div>
+<div style="background:blue; color:blue;     margin-top: -50px;
+    z-index: 99999;
+    position: relative;">
+
   <div class="container">
     <div class="col-md-8 col-sm-12">
       <div class="text">
@@ -33,15 +30,13 @@
   </div>
 </div>
 </template>
-<style>
+<style scoped>
 
 .header-image{
     position: relative;
     display: block;
 }
-.nav__left {
-  display: none !important;
-}
+
 .header-image img {
     max-width: 100%;
 }

@@ -15,9 +15,6 @@
         <li>
           <router-link to="/catalog"><i class="fa fa-home"></i> Catalog</router-link>
         </li>
-        <li>
-          <router-link to="/admin"><i class="fa fa-user"></i> Admin</router-link>
-        </li>
       </ul>
       <ul class="nav__right">
         <li>
