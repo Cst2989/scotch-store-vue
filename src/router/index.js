@@ -5,6 +5,7 @@ import Service from '@/pages/Service';
 import Profile from '@/pages/Profile';
 import DespreNoi from '@/pages/DespreNoi';
 import Catalog from '@/pages/Catalog';
+import Forget from '@/pages/Forget';
 import Wishlist from '@/pages/Wishlist';
 import Contact from '@/pages/Contact';
 import Cart from '@/pages/Cart';
@@ -28,6 +29,11 @@ export default new Router({
         path: '/service',
         name: 'Service',
         component: Service,
+    },
+    {
+      path: '/forget',
+      name: 'Forget Passowrd',
+      component: Forget,
     },
     {
       path: '/profile',

@@ -50,7 +50,7 @@
              <option value="2009">
                > 2009
              </option>
-             <option selected value="2010">
+             <option value="2010">
                > 2010
              </option>
              <option value="2011">
@@ -95,7 +95,6 @@
     created () {
       if (this.products.length === 0) {
         this.$store.dispatch('allProducts')
-          setTimeout(() => this.$store.dispatch('filterByYear', 2010), 1000)
       }
       if(this.$route.query.filterBy) {
           setTimeout(() =>  this.$store.dispatch('filterByName', this.$route.query.filterBy), 1000)

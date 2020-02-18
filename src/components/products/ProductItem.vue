@@ -95,7 +95,8 @@
     display: block;
     position: absolute;
     top:0;
-    width: max-content;
+    width: 100%;
+    max-width: 90%;
   }
   .product__price-cart {
     flex: 1;

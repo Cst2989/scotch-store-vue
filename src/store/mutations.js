@@ -13,6 +13,7 @@ import {
   LOGIN,
   REGISTER,
   UPDATE_PROFILE,
+  RESET_PASSWORD,
   REMOVE_FROM_CART,
   ORDER_PRODUCTS_ASC,
   ORDER_PRODUCTS_DESC,
@@ -46,6 +47,10 @@ export const productMutations = {
     if(payload.id) {
       state.user = payload;
     }
+  },
+  [RESET_PASSWORD] (state, payload) {
+    // Called when fetching products
+    alert('Password Updated');
   },
   [ALL_PRODUCTS_SUCCESS] (state, payload) {
     // Called when products have been fetched

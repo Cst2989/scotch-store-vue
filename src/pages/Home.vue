@@ -23,7 +23,7 @@
           <button v-on:click="login()" class="btn btn-default">Login</button>
         </div>
         <div class="form-group">
-          <a href="#">Forgot your password?</a>
+            <router-link to="/forget">Forgot your password?</router-link>
         </div>
       </div>
       <div class="form col-md-6" v-if="!isLoggedIn">
