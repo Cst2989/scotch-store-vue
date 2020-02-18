@@ -24,18 +24,6 @@
         <span class="small text-danger" v-show="errors.has('year')">Year is required</span>
       </div>
       <div class="form-group">
-        <label>Price</label>
-        <input
-          type="number"
-          class="form-control"
-          placeholder="Price"
-          v-model="model.price"
-          v-validate="'required'"
-          name="price"
-          :class="{'form-control': true, 'error': errors.has('price') }" />
-        <span class="small text-danger" v-show="errors.has('price')">Price is required</span>
-      </div>
-      <div class="form-group">
         <label>Location</label>
         <input
           type="text"
@@ -75,11 +63,11 @@
         <span class="small text-danger" v-show="errors.has('description')">Description is required</span>
       </div>
       <div class="form-group new-button">
-        <button class="button">
+        <button v-if="!isEditing" class="button">
           <i class="fa fa-pencil"></i>
-          <span v-if="isEditing">Update Product</span>
-          <span v-else>Add Product</span>
+          <span>Add Car</span>
         </button>
+        <a href="#" v-else>Update Car</a>
       </div>
     </div>
   </form>

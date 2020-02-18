@@ -6,7 +6,10 @@
           <ul class="admin-menu">
             <!-- Links are to sibling routes -->
             <li><router-link to="/admin">View Products</router-link></li>
-            <li><router-link to="/admin/new">New Product</router-link></li>
+            <li  v-on:click="add()">
+                <router-link v-if="counter === 1" to="/admin/new">New Product</router-link>
+                <a v-else>New Product</a>
+            </li>
           </ul>
         </div>
         <!-- Outlet for children routes -->
@@ -15,6 +18,20 @@
     </div>
   </div>
 </template>
+<script>
+  export default {
+      data() {
+        return {
+          counter: 0 
+        }
+      },
+      methods: {
+        add () {
+          this.counter = 1;
+        }
+      },
+    }
+</script>
 <style>
   .admin-menu a {
     display: block;

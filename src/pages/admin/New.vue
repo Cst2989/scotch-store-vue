@@ -1,7 +1,6 @@
 <template>
-    <!-- <product-form @save-product="addProduct" :model="model">
-    </product-form> -->
-    <h2>In development</h2>
+    <product-form @save-product="addProduct" :model="model">
+    </product-form>
 </template>
 <script>
 export default {
