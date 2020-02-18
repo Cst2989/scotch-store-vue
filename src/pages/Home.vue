@@ -11,16 +11,35 @@
       <h1><i class="fa fa-braille"></i> Welcome to our website!</h1>
     </div>
     <div class="container">
-      <div class="form col-md-6">
+      <div class="form col-md-6" v-if="!isLoggedIn">
+        <h2>Login</h2>
         <div class="form-group">
           <input type="text" class="form-control" v-model="username" placeholder="Username">
         </div>
         <div class="form-group">
           <input type="password" class="form-control" v-model="password" placeholder="Password">
         </div>
-         <div class="form-group">
+        <div class="form-group">
           <button v-on:click="login()" class="btn btn-default">Login</button>
         </div>
+        <div class="form-group">
+          <a href="#">Forgot your password?</a>
+        </div>
+      </div>
+      <div class="form col-md-6" v-if="!isLoggedIn">
+        <h2>Register</h2>
+        <div class="form-group">
+          <input type="text" class="form-control" v-model="username2" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" v-model="password2" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <button v-on:click="register()" class="btn btn-default">Register</button>
+        </div>
+      </div>
+      <div class="col-md-6" v-else>
+        <h3>You are now logged in!</h3>
       </div>
     </div>
     <div class="title">
@@ -47,15 +66,29 @@
           ],
           username: '',
           password: '',
+          username2: '',
+          password2: '',
         }
+    },
+    computed: {
+      isLoggedIn () {
+        return this.$store.getters.isLoggedIn
+      }
     },
     methods: {
       login() {
         let payload = {
-          username: encodeHTML(this.username),
-          password: encodeHTML(this.password),
+          username: this.encodeHTML(this.username),
+          password: this.encodeHTML(this.password),
         }
         this.$store.dispatch('login', payload)
+      },
+      register() {
+        let payload = {
+          username: this.encodeHTML(this.username2),
+          password: this.encodeHTML(this.password2),
+        }
+        this.$store.dispatch('register', payload)
       },
       encodeHTML(s) {
         return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');

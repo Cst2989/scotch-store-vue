@@ -7,13 +7,22 @@
           <router-link to="/"><i class="fa fa-home"></i> Home</router-link>
         </li>
         <li>
-          <router-link to="/despre-noi"><i class="fa fa-home"></i> About us</router-link>
+          <router-link to="/despre-noi"><i class="fa fa-home"></i> About</router-link>
         </li>
         <li>
           <router-link to="/contact"><i class="fa fa-home"></i> Contact</router-link>
         </li>
         <li>
           <router-link to="/catalog"><i class="fa fa-home"></i> Catalog</router-link>
+        </li>
+        <li v-if="isLoggedIn">
+          <router-link to="/profile"><i class="fa fa-user"></i> Profile</router-link>
+        </li>
+        <li v-if="isLoggedIn">
+          <router-link to="/wishlist"><i class="fa fa-star"></i> Wishlist ({{wishlistItemsCount}})</router-link>
+        </li>
+        <li v-if="isLoggedIn">
+          <router-link to="/admin"><i class="fa fa-plus"></i> Add your car</router-link>
         </li>
       </ul>
       <ul class="nav__right">
@@ -231,6 +240,13 @@ export default {
     cartItemsCount() {
       // Cart count
       return this.cartItems.length
+    },
+    wishlistItemsCount() {
+      // wishlist count
+      return this.$store.state.wishlist.length
+    },
+    isLoggedIn () {
+      return this.$store.getters.isLoggedIn
     },
     showLoader() {
       // Loading spinner

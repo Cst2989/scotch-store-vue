@@ -2,8 +2,10 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/pages/Home';
 import Service from '@/pages/Service';
+import Profile from '@/pages/Profile';
 import DespreNoi from '@/pages/DespreNoi';
 import Catalog from '@/pages/Catalog';
+import Wishlist from '@/pages/Wishlist';
 import Contact from '@/pages/Contact';
 import Cart from '@/pages/Cart';
 import Details from '@/pages/Details';
@@ -28,10 +30,20 @@ export default new Router({
         component: Service,
     },
     {
+      path: '/profile',
+      name: 'Profile',
+      component: Profile,
+    },
+    {
+      path: '/wishlist',
+      name: 'Wishlist',
+      component: Wishlist,
+    },
+    {
       path: '/catalog',
       name: 'Catalog',
       component: Catalog,
-  },
+    },
     {
         path: '/contact',
         name: 'Contact',

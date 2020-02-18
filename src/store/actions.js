@@ -13,7 +13,10 @@ import {
   ORDER_PRODUCTS_ASC,
   ORDER_PRODUCTS_DESC,
   FILTER_BY_NAME,
+  FILTER_BY_YEAR,
   LOGIN,
+  REGISTER,
+  UPDATE_PROFILE,
   ALL_PRODUCTS_SUCCESS,
 } from './mutation-types';
 
@@ -29,10 +32,23 @@ export const productActions = {
   filterByName({commit}, payload) {
     commit(FILTER_BY_NAME, payload);
   },
+  filterByYear({commit}, payload) {
+    commit(FILTER_BY_YEAR, payload);
+  },
   login({commit}, payload) {
-    axios.post(`${API_BASE}/login`, payload).then(response => {
+    axios.post(`http://localhost:3000/api/v1/login`, payload).then(response => {
      commit(LOGIN, response.data);
     })
+  },
+  register({commit}, payload) {
+    axios.post(`http://localhost:3000/api/v1/register`, payload).then(response => {
+     commit(REGISTER, response.data);
+    })
+  },
+  updateProfile({commit}, payload) {
+    axios.post(`http://localhost:3000/api/v1/update-profile`, payload).then(response => {
+      commit(UPDATE_PROFILE, response.data);
+     })
   },
   allProducts ({commit}) {
     commit(ALL_PRODUCTS)

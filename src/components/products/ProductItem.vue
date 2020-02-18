@@ -7,14 +7,20 @@
             class="img-responsive" :src="product.image" alt="">
         </div>
         <div class="product__description">
-          <h4>{{product.name}}</h4>
+          <h4>{{product.brand}} {{product.name}}</h4>
+          
           <div class="product__info">
             <small>{{product.year}}</small>
             <small>{{product.location}}</small>
           </div>
+          
           <div class="product__price-cart">
             ${{product.price}}
           </div>
+        </div>
+        <div class="product_info2">
+          <h5>Description: {{product.description}}</h5>
+          <h6>Brand: {{product.brand}}</h6>
         </div>
       </router-link>
       <div class="product__action">

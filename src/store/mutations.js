@@ -8,12 +8,17 @@ import {
   REMOVE_PRODUCT,
   REMOVE_PRODUCT_SUCCESS,
   ADD_TO_CART,
+  ADD_TO_WISHLIST,
+  REMOVE_FROM_WISHLIST,
   LOGIN,
+  REGISTER,
+  UPDATE_PROFILE,
   REMOVE_FROM_CART,
   ORDER_PRODUCTS_ASC,
   ORDER_PRODUCTS_DESC,
   ALL_PRODUCTS,
   FILTER_BY_NAME,
+  FILTER_BY_YEAR,
   ALL_PRODUCTS_SUCCESS,
 } from './mutation-types';
 
@@ -24,7 +29,23 @@ export const productMutations = {
   },
   [LOGIN] (state, payload) {
     // Called when fetching products
-    console.log(payload)
+    if(payload.id) {
+      state.isLoggedIn = true;
+      state.user = payload;
+    }
+  },
+  [REGISTER] (state, payload) {
+    // Called when fetching products
+    if(payload.id) {
+      state.isLoggedIn = true;
+      state.user = payload;
+    }
+  },
+  [UPDATE_PROFILE] (state, payload) {
+    // Called when fetching products
+    if(payload.id) {
+      state.user = payload;
+    }
   },
   [ALL_PRODUCTS_SUCCESS] (state, payload) {
     // Called when products have been fetched
@@ -60,6 +81,9 @@ export const productMutations = {
   [FILTER_BY_NAME]: (state, payload) => {
     state.products = state.products.filter((a) => a.name === payload);
   },
+  [FILTER_BY_YEAR]: (state, payload) => {
+    state.products = state.products.filter((a) => a.year > payload);
+  },
   [UPDATE_PRODUCT]: (state, payload) => {
     state.showLoader = true
   },
@@ -90,6 +114,14 @@ export const cartMutations = {
     const index = state.cart.findIndex(p => p._id === payload)
     state.cart.splice(index, 1)
     console.log(state.cart, state.cart.length, index)
+  }
+}
+
+export const whishlistMutations = {
+  [ADD_TO_WISHLIST]: (state, payload) => state.wishlist.push(payload),
+  [REMOVE_FROM_WISHLIST]: (state, payload) => {
+    const index = state.wishlist.findIndex(p => p._id === payload)
+    state.wishlist.splice(index, 1)
   }
 }
 
