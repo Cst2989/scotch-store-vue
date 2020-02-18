@@ -52,10 +52,13 @@
     methods: {
       login() {
         let payload = {
-          username: this.username,
-          password: this.password,
+          username: encodeHTML(this.username),
+          password: encodeHTML(this.password),
         }
         this.$store.dispatch('login', payload)
+      },
+      encodeHTML(s) {
+        return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
       }
     },
     components: {

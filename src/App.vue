@@ -4,7 +4,7 @@
     <div class="container">
       <ul class="nav__left">
         <li>
-          <router-link to="/despre-noi"><i class="fa fa-home"></i> Home</router-link>
+          <router-link to="/"><i class="fa fa-home"></i> Home</router-link>
         </li>
         <li>
           <router-link to="/despre-noi"><i class="fa fa-home"></i> About us</router-link>

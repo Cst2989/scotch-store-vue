@@ -1,8 +1,5 @@
 <template>
-<div style="background:blue; color:blue;     margin-top: -50px;
-    z-index: 99999;
-    position: relative;">
-
+<div>
   <div class="container">
     <div class="col-md-8 col-sm-12">
       <div class="text">
@@ -36,7 +33,6 @@
     position: relative;
     display: block;
 }
-
 .header-image img {
     max-width: 100%;
 }

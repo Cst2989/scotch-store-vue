@@ -8,8 +8,7 @@
   </div>
   <div class="container">
     <div class="col-md-8 col-sm-12">
-      <div class="text" style="color:#fff;position: relative;
-    z-index: -1;">
+      <div class="text">
         <p> <strong>The standard Lorem Ipsum passage, used since the 1500s</strong></p>
         <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
           irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -36,7 +35,7 @@
               <label style="color:#ccc" for="exampleInputEmail1">Message</label>
               <textarea  class="form-control" name="" id="" cols="30" rows="10"></textarea>
             </div>
-            <div class="form-group" style="margin-bottom: -30px">
+            <div class="form-group">
               <!-- Indicates a successful or positive action -->
               <button type="button" class="btn btn-success">Success</button>
             </div>
@@ -47,7 +46,7 @@
     <div class="col-md-4 col-sm-12">
       <div class="title">
           <h1><i class="fa fa-braille"></i> Contact info</h1>
-          <a href="mailto:contact@audicars.ro">contact@bmwmotors.ro</a>
+          <a href="mailto:contact@bmwmotors.ro">contact@bmwmotors.ro</a>
       </div>
     </div>
   </div>
