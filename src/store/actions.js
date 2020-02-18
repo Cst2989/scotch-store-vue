@@ -36,17 +36,17 @@ export const productActions = {
     commit(FILTER_BY_YEAR, payload);
   },
   login({commit}, payload) {
-    axios.post(`http://localhost:3000/api/v1/login`, payload).then(response => {
+    axios.post(`${API_BASE}/login`, payload).then(response => {
      commit(LOGIN, response.data);
     })
   },
   register({commit}, payload) {
-    axios.post(`http://localhost:3000/api/v1/register`, payload).then(response => {
+    axios.post(`${API_BASE}/register`, payload).then(response => {
      commit(REGISTER, response.data);
     })
   },
   updateProfile({commit}, payload) {
-    axios.post(`http://localhost:3000/api/v1/update-profile`, payload).then(response => {
+    axios.post(`${API_BASE}/update-profile`, payload).then(response => {
       commit(UPDATE_PROFILE, response.data);
      })
   },
