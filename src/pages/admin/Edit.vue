@@ -1,8 +1,5 @@
 <template>
-  <product-form
-    @save-product="updateProduct"
-    :model="model"
-    :isEditing="true" ></product-form>
+  <h2>In development</h2>
 </template>
 
 <script>

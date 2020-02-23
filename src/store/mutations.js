@@ -24,7 +24,7 @@ export const productMutations = {
   },
   [LOGIN] (state, payload) {
     // Called when fetching products
-    console.log(payload)
+    console.log(payload);
   },
   [ALL_PRODUCTS_SUCCESS] (state, payload) {
     // Called when products have been fetched
