@@ -71,6 +71,22 @@ addProduct ({commit}, payload) {
     commit(ADD_PRODUCT_SUCCESS, response.data)
   })
 },
+uploadCars ({commit}, payload) {
+  // Create a new product via API
+  axios.post( `${API_BASE}/upload-cars`,
+  payload,
+  {
+    headers: {
+        'Content-Type': 'multipart/form-data'
+    }
+  }
+).then(function(){
+  console.log('SUCCESS!!');
+})
+.catch(function(){
+  console.log('FAILURE!!');
+});
+},
 updateProduct ({commit}, payload) {
   commit(UPDATE_PRODUCT)
   // Update product via API

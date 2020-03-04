@@ -5,8 +5,10 @@
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
           <ul class="admin-menu">
             <!-- Links are to sibling routes -->
-            <li><router-link to="/admin">View Products</router-link></li>
-            <li><router-link to="/admin/new">New Product</router-link></li>
+            <li><router-link to="/admin">View Cars</router-link></li>
+            <li><router-link to="/admin/new">New Car</router-link></li>
+            <li><router-link to="/admin/upload-cars">Upload cars</router-link></li>
+            <li><router-link to="/admin/upload-users">Upload Users</router-link></li>
           </ul>
         </div>
         <!-- Outlet for children routes -->

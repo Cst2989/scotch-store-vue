@@ -12,6 +12,7 @@ import Details from '@/pages/Details';
 // Admin Components
 import Index from '@/pages/admin/Index';
 import New from '@/pages/admin/New';
+import UploadCars from '@/pages/admin/Upload';
 import Products from '@/pages/admin/Products';
 import Edit from '@/pages/admin/Edit';
 
@@ -66,6 +67,11 @@ export default new Router({
           path: 'new',
           name: 'New',
           component: New,
+        },
+        {
+          path: 'upload-cars',
+          name: 'Upload Cars',
+          component: UploadCars,
         }, {
           path: '',
           name: 'Products',
