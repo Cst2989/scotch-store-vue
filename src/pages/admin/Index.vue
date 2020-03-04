@@ -8,7 +8,6 @@
             <li><router-link to="/admin">View Cars</router-link></li>
             <li><router-link to="/admin/new">New Car</router-link></li>
             <li><router-link to="/admin/upload-cars">Upload cars</router-link></li>
-            <li><router-link to="/admin/upload-users">Upload Users</router-link></li>
           </ul>
         </div>
         <!-- Outlet for children routes -->
